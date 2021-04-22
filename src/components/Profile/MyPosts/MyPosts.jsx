@@ -7,15 +7,14 @@ const MyPosts = () => {
     <div>
       <div>My posts</div>
       <textarea></textarea>
-      
+
       <div>
         <button>Add post</button>
       </div>
 
       <div className={p.posts}></div>
-      <Posts message='Hi, how are you?'/>
-      <Posts message="It's my first post"/>
-
+      <Posts message="Hi, how are you?" like="15" />
+      <Posts message="It's my first post" like="16" />
     </div>
   );
 };
