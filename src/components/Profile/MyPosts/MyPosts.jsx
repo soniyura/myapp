@@ -13,12 +13,8 @@ const MyPosts = () => {
       </div>
 
       <div className={p.posts}></div>
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
-      <Posts />
+      <Posts message='Hi, how are you?'/>
+      <Posts message="It's my first post"/>
 
     </div>
   );
