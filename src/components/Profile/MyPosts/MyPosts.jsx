@@ -11,7 +11,7 @@ const MyPosts = (props) => {
         {id: 3, message: 'blabla bla', likesCount: 15},
         {id: 4, message: 'ulalala', likesCount: 21}
     ]
-    
+
     // преобразуем (мапим) масив posts
     let postsElements =
         posts.map ( p => <Posts message={p.message} likesCount={p.likesCount}/> )

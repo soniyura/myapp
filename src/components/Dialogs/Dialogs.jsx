@@ -1,21 +1,8 @@
 import React from 'react';
 import s from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
-
-const DialogItem = (props) => {
-    let paht = "/dialogs/" + props.id;
-    return (
-        <div className={s.dialog + ' ' + s.active}>
-            <NavLink to={paht}>{props.name}</NavLink>
-        </div>
-    )
-}
-
-const Message = (props) => {
-    return (
-        <div className={s.dialog}>{props.massage}</div>
-    )
-}
+import DialogItem from "./Dialogitem/Dialogsitem";
+import Message from "./Message/Massage";
 
 const Dialogs = (props) => {
     // масивы который должен как бы приходить с сервера
@@ -38,6 +25,7 @@ const Dialogs = (props) => {
     ]
 
     //мапим  преобразуем масив диалогов что бы не писать много кода
+    // eslint-disable-next-line react/jsx-no-undef
     let dialogsElements = dialogs.map( d => <DialogItem name={d.name} id={d.id}/>  );
     //  преобразуем масив сообщений
     let massagesElements = massages.map( m => <Message massage={m.massage}/> );
