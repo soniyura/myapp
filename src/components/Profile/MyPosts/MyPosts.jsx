@@ -4,8 +4,7 @@ import Posts from "./Post/Posts";
 
 const MyPosts = (props) => {
 
-    // масивы который должен как бы приходить с сервера
-   /* */
+   
 
     // преобразуем (мапим) масив posts
     let postsElements =
