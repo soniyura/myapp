@@ -9,10 +9,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
 
-
 const App = (props) => {
-
-
     return (
         // оборачиваем все в BrowserRouter для
         // того что бы странички при клике перезагружались
@@ -21,7 +18,7 @@ const App = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile'
+                    <Route path='/profile'  //Route слидит за адресной строкой браузера и перезагружает ее
                            render={ () => <Profile state={props.state.profilePage}/>}/>
                     <Route path='/dialogs'
                            render={ () => <Dialogs state={props.state.dialogsPage}/>}/>

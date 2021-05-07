@@ -6,12 +6,12 @@ import Message from "./Message/Massage";
 
 const Dialogs = (props) => {
     //мапим  преобразуем масив диалогов что бы не писать много кода
-    // eslint-disable-next-line react/jsx-no-undef
+    // масив JSX елементов
     let dialogsElements = props.state.dialogs.map( d => <DialogItem name={d.name} id={d.id}/>  );
     //  преобразуем масив сообщений
     let massagesElements = props.state.massages.map( m => <Message massage={m.massage}/> );
 
-    // вывод диалогов
+    // вывовим масив елементов
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItem}>
