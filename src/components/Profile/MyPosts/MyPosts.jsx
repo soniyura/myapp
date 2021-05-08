@@ -12,7 +12,8 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef(); // создаем пустую ссылку1
     let addPost = () => {
         let text = newPostElement.current.value; // current ссылкается на нативный HTML елемент и у этого елемента берем value
-        alert(text);
+        props.addPost(text);
+        newPostElement.current.value = '';
     }
     //добавление нового поста - конец
 
