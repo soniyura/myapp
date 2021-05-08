@@ -10,7 +10,6 @@ const MyPosts = (props) => {
 
     //добавление нового поста - начало
     let newPostElement = React.createRef(); // создаем пустую ссылку1
-
     let addPost = () => {
         let text = newPostElement.current.value; // current ссылкается на нативный HTML елемент и у этого елемента берем value
         alert(text);
@@ -36,5 +35,6 @@ const MyPosts = (props) => {
         </div>
     )
 }
+
 
 export default MyPosts;

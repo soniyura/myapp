@@ -22,8 +22,6 @@ let state = {
             {id: 2, massage: 'How is your'},
             {id: 3, massage: 'Youuu'},
             {id: 4, massage: 'Yoy'},
-            {id: 5, massage: 'Yol'},
-            {id: 6, massage: 'Yoooool'},
         ]
     }
 }

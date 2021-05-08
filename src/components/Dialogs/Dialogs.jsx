@@ -11,6 +11,13 @@ const Dialogs = (props) => {
     //  преобразуем масив сообщений
     let massagesElements = props.state.massages.map( m => <Message massage={m.massage}/> );
 
+    //добавление нового сообщения - начало
+    let newMassageElement = React.createRef();
+    let addMassage = () => {
+        let text = newMassageElement.current.value;
+        alert(text);
+    }
+    //добавление нового сообщения - конец
     // вывовим масив елементов
     return (
         <div className={s.dialogs}>
@@ -20,7 +27,17 @@ const Dialogs = (props) => {
 
             <div className={s.messages}>
                 {massagesElements}
+                {/*привязка ссылка1 к полю textarea, добавление нового сообщения - результат*/}
+                <div>
+                    <div>
+                        <textarea ref={newMassageElement}></textarea>
+                    </div>
+                    <div>
+                        <button onClick={addMassage}>Add messages</button>
+                    </div>
+                </div>
             </div>
+
         </div>
     )
 }
