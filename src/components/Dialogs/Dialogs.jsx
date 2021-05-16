@@ -17,7 +17,7 @@ const Dialogs = (props) => {
         let text = newMassageElement.current.value;
         alert(text);
     }
-    //добавление нового сообщения - конец
+    //добавление нового сообщения - конецnpm start
     // вывовим масив елементов
     return (
         <div className={s.dialogs}>

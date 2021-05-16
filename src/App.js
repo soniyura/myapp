@@ -19,10 +19,13 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Route path='/profile'  //Route слидит за адресной строкой браузера и перезагружает ее
-                           render={ () => <Profile state={props.state.profilePage}
-                                                   addPost={props.addPost} /> } />
+                           render={ () => <Profile profilePage={props.state.profilePage}
+                                                   addPost={props.addPost}
+                                                   updataNewPostText={props.updataNewPostText}
+                           /> } />
                     <Route path='/dialogs'
                            render={ () => <Dialogs state={props.state.dialogsPage} /> } />
+
                     <Route path='/news' render={ () => <News />}/>
                     <Route path='/music' render={ () => <Music />}/>
                     <Route path='/settings' render={ () => <Settings />}/>
