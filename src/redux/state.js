@@ -48,4 +48,5 @@ export let updataNewPostText = (newText) => {
 }
 
 
+
 export default state;
