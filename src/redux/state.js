@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+    console.log('state change');
+}
 
 let state = {
     profilePage: {
@@ -10,6 +12,7 @@ let state = {
         ],
         newPostText: 'it-kamasutra.com'
     },
+
     dialogsPage: {
         dialogs: [
             {id: 1, name: 'Dimych'},
