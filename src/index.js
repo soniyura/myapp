@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import state from "./redux/state";
+import state, {subscribe} from "./redux/state";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +9,7 @@ import {addPost, updataNewPostText} from "./redux/state";
 
 
 
-let rerenderEntireTree = () =>{
+let rerenderEntireTree = (state) =>{
     ReactDOM.render(
         <BrowserRouter>
             <App state={state}
@@ -23,7 +23,7 @@ let rerenderEntireTree = () =>{
 
 // eslint-disable-next-line no-undef
 rerenderEntireTree(state);
-
+subscribe(rerenderEntireTree);
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
